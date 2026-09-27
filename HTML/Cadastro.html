@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Instituto Esperança</title>
+    <link rel="stylesheet" href="../CSS/Estilo.css">
+</head>
+<body>
+
+    <!-- O cadastro reaproveita a navegação e a identidade visual do site. -->
+    <nav class="nav" aria-label="Navegação principal">
+            <a class="brand" href="Index.html">Instituto Esperança</a>
+            <ul class="nav-list">
+                <li>
+                    <a href="Index.html">Início</a>
+                </li>
+                <li>
+                    <a href="Projetos.html">Projetos</a>
+                </li>
+                <li>
+                    <a href="Cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </nav>
+
+    <main id="principal" class="mainCadastro">
+        <h1>Cadastro de Voluntários e Doadores</h1>
+
+        <p>
+            Preencha o formulário abaixo para se tornar um colaborador do
+            Instituto Esperança.
+        </p>
+
+        <!-- aria-live permite que leitores de tela anunciem o retorno do envio. -->
+        <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+        <!-- required e pattern fazem a primeira camada de validação no próprio navegador. -->
+        <form id="cadastroForm" action="#" method="post">
+
+            <!-- Fieldsets agrupam campos relacionados e melhoram a leitura do formulário. -->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+ <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+                
+                <label for="cpf">CPF:</label>
+                <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    placeholder="000.000.000-00"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    maxlength="14"
+                    inputmode="numeric"
+                    required>
+                
+                <label for="telefone">Telefone:</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(11) 99999-9999"
+                    pattern="\([0-9]{2}\)\s[0-9]{4,5}-[0-9]{4}"
+                    maxlength="15"
+                    inputmode="tel"
+                    required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <label for="cep">CEP:</label>
+                <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    placeholder="00000-000"
+                    pattern="[0-9]{5}-[0-9]{3}"
+                    maxlength="9"
+                    inputmode="numeric"
+                    required>
+                
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+                
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+                
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PR">Paraná</option>
+                </select>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Forma de Participação</legend>
+                    <div class="radio-group">
+                        <label>
+                    
+                            <input type="radio" name="participacao" value="voluntario" required>
+                            Voluntário
+                        </label>
+
+                         <label>
+                            <input type="radio" name="participacao" value="doador">
+                            Doador
+                        </label>
+                    </div>
+               
+
+               
+            </fieldset>
+
+            <div id="botoes" class="buttons">
+               <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button> 
+            </div>
+            
+
+        </form>
+        
+    </main>
+
+    <div class="toast toast-success" id="cadastroToast" role="status" aria-live="polite" hidden>
+        Novo cadastro registrado.
+    </div>
+
+    <div class="modal-overlay" id="cadastroModal" role="dialog" aria-modal="true" aria-labelledby="cadastroModalTitulo" hidden>
+        <div class="modal">
+            <h2 id="cadastroModalTitulo">Cadastro enviado</h2>
+            <p class="modal-content">Obrigado por se cadastrar no Instituto Esperança.</p>
+            <div class="modal-actions">
+                <button type="button" id="fecharCadastroModal">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+       <section id="contato">
+        <h2>Entre em Contato</h2>
+
+        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+        <p><strong>E-mail:</strong> contato@institutoesperanca.org.br</p>
+        <p><strong>Endereço:</strong> Rua da Solidariedade, 100 - São Paulo/SP</p>
+    </section> 
+    </footer>
+    <!-- O script apenas simula o retorno; um backend seria necessário para salvar dados. -->
+    <script type="module" src="../scripts/main.js"></script>
+</body>
+</html>

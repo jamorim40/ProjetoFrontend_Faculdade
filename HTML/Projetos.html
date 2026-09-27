@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Instituto Esperança</title>
+    <link rel="stylesheet" href="../CSS/Estilo.css">
+</head>
+<body>
+    <!-- O mesmo cabeçalho em todas as páginas cria uma experiência consistente. -->
+    <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="Index.html">Instituto Esperança</a>
+        <ul class="nav-list">
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Projetos.html">Projetos</a></li>
+            <li><a href="Cadastro.html">Cadastro</a></li>
+        </ul>
+    </nav>
+    <main class="page-shell">
+        <header class="section-heading">
+            <span class="eyebrow">Onde atuamos</span>
+            <h1>Projetos e iniciativas solidárias</h1>
+            <p>Conheça as ações do Instituto Esperança e descubra como você pode contribuir para transformar vidas.</p>
+        </header>
+        <!-- Cada projeto é um article independente, facilitando manutenção e expansão. -->
+        <section class="section" aria-labelledby="voluntariado">
+            <h2 id="voluntariado">Voluntariado</h2>
+            <div class="project-grid" data-project-category="voluntariado"></div>
+        </section>
+        <section class="section" aria-labelledby="doacoes">
+            <h2 id="doacoes">Campanhas de doação</h2>
+            <div class="project-grid" data-project-category="doacoes"></div>
+        </section>
+        <!-- Chamada final direciona o visitante para a ação desejada. -->
+        <section class="participation" aria-labelledby="participar">
+            <h2 id="participar">Como participar</h2>
+            <p>
+                Existem diversas formas de colaborar com o Instituto Esperança:
+                atuando como voluntário, realizando doações ou divulgando nossas
+                campanhas em sua comunidade.
+            </p>
+
+            <a class="button" href="Cadastro.html">Preencher cadastro</a>
+        </section>
+    </main>
+    <footer class="footer">
+       <section id="contato">
+        <h2>Entre em Contato</h2>
+
+        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+        <p><strong>E-mail:</strong> contato@institutoesperanca.org.br</p>
+        <p><strong>Endereço:</strong> Rua da Solidariedade, 100 - São Paulo/SP</p>
+    </section> 
+    </footer>
+<script type="module" src="../scripts/main.js"></script>
+</body>
+</html>

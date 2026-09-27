@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - Instituto Esperança</title>
+    <link rel="stylesheet" href="../CSS/Estilo.css">
+</head>
+<body>
+    <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="Index.html">Instituto Esperança</a>
+        <ul class="nav-list">
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Projetos.html">Projetos</a></li>
+            <li><a href="Cadastro.html">Cadastro</a></li>
+            <li><a href="componentes.html">Componentes</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-shell">
+        <header class="section-heading">
+            <span class="eyebrow">Design system</span>
+            <h1>Componentes de feedback</h1>
+            <p>Uma demonstração dos estados visuais usados pelo Instituto Esperança.</p>
+        </header>
+
+        <section class="demo-section" aria-labelledby="badges">
+            <h2 id="badges">Badges</h2>
+            <span class="badge badge-success">Projeto Ativo</span>
+            <span class="badge badge-warning">Doação</span>
+            <span class="badge badge-info">Voluntariado</span>
+        </section>
+
+        <section class="demo-section" aria-labelledby="alertas">
+            <h2 id="alertas">Alertas</h2>
+            <div class="alert alert-success" role="status">Cadastro realizado com sucesso.</div>
+            <div class="alert alert-warning" role="status">Atenção: confira seus dados antes de continuar.</div>
+            <div class="alert alert-error" role="alert">Não foi possível concluir a solicitação.</div>
+        </section>
+
+        <section class="demo-section" aria-labelledby="botoes">
+            <h2 id="botoes">Estados dos botões</h2>
+            <div class="demo-buttons">
+                <button type="button">Botão normal</button>
+                <button type="button" disabled>Botão desabilitado</button>
+            </div>
+        </section>
+
+        <section class="demo-section" aria-labelledby="validacao">
+            <h2 id="validacao">Validação visual</h2>
+            <form class="demo-form">
+                <label for="campoValido">Campo válido</label>
+                <input id="campoValido" type="text" value="Instituto Esperança" required>
+                <label for="campoInvalido">Campo inválido</label>
+                <input id="campoInvalido" type="email" value="email-invalido" required>
+                <label for="estadoDemo">Seleção válida</label>
+                <select id="estadoDemo" required>
+                    <option value="">Selecione</option>
+                    <option value="SP" selected>São Paulo</option>
+                </select>
+            </form>
+        </section>
+    </main>
+
+    <div class="toast toast-success" role="status">Novo cadastro registrado.</div>
+
+    <div class="modal-overlay" id="modalDemo" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="modal">
+            <h2 id="modalTitulo">Cadastro enviado</h2>
+            <p class="modal-content">Obrigado por se cadastrar no Instituto Esperança.</p>
+            <div class="modal-actions">
+                <button type="button" id="fecharModal">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/main.js"></script>
+</body>
+</html>
