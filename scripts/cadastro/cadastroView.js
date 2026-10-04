@@ -49,7 +49,7 @@ export function fillCadastroForm(form, cadastro) {
 
 export function showSuccess(elements) {
     elements.feedback.textContent =
-        "Cadastro recebido com sucesso! Em breve entraremos em contato.";
+        "Cadastro recebido com sucesso! Em breve entraremos em contato, muito obrigado!.";
     elements.feedback.className =
         "form-feedback alert alert-success visible";
     elements.toast.hidden = false;
